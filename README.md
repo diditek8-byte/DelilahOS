@@ -13,6 +13,7 @@ Features
 Need to include
 - Apps
 - Desktop Bottom Bar
+- Widgets
 
 Built with
 - HTML5
