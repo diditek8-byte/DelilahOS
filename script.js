@@ -66,18 +66,36 @@ function openWindow() {
 function expandWindow() {
     let aboutScreen = document.querySelector("#about");
     let aboutheaderScreen = document.querySelector("#aboutheader");
-    let expand_btn = document.querySelector("#expand");
+    let window_btn = document.querySelector("#window-btn");
 
     aboutScreen.style.width = "100%";
     aboutScreen.style.position = "absolute";
     aboutScreen.style.top = "10%";
     aboutScreen.style.left = "0px";
     aboutheaderScreen.style.width = "100%";
-
-    expand_btn.addEventListener("click", function () {
-        if ("click" > 2) {
-            aboutScreen.style.width = "450px";
-        }
-    })
+    aboutheaderScreen.style.position = "relative";
+    aboutheaderScreen.style.left = "-20%";
+    
     
 }
+
+let expand_btn = document.querySelector("#expand");
+
+ let expand_num = 0;
+    expand_btn.addEventListener("click", function () {
+        let aboutScreen = document.querySelector("#about");
+        expand_num = expand_num + 1;
+
+        if (expand_num === 1) {
+            expandWindow()
+            
+        } else if (expand_num === 2) {
+            aboutScreen.style.width = "450px";
+            aboutScreen.style.position = "absolute";
+            aboutScreen.style.top = "120px";
+            aboutScreen.style.left = "20%";
+            expand_num = 0;
+        }
+
+
+    });
