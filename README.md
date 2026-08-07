@@ -6,13 +6,14 @@ This project is currently a work-in progress for the Hack Club Stardance event!
 Features
 - Desktop Top Bar
 - Draggable Windows
-- Clock
+- Time & Date
 - About Me Window
 - Really cool self designed background
+- Notes App
+- Desktop Bottom Bar
 
 Need to include
-- Apps
-- Desktop Bottom Bar
+- More Apps
 - Widgets
 
 Built with
