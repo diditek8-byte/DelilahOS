@@ -10,6 +10,7 @@ Features
 - About Me Window
 - Really cool self designed background
 - Notes App
+- Random Quotes Generator App
 - Desktop Bottom Bar
 
 Need to include
