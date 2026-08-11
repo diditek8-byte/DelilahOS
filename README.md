@@ -12,10 +12,15 @@ Features
 - Notes App
 - Random Quotes Generator App
 - Desktop Bottom Bar
+- Green beam that follows the mouse
+- Weather App
+- Calculator
+- Random Quotes Generator App
+- Loading Page
+- Calendar Widget
 
 Need to include
 - More Apps
-- Widgets
 
 Built with
 - HTML5
@@ -24,3 +29,4 @@ Built with
 - Fontawesome
 - Google Fonts
 - Canva
+- Flaticon
