@@ -1,7 +1,7 @@
 Delilah OS
 
-A web-based operating system inspired by modern desktop environment.
-This project is currently a work-in progress for the Hack Club Stardance event!
+A web-based operating system inspired by my favorite superhero Starfire.
+I got the idea for this project from Hack Club, but I wanted to make it reflect who I am.
 
 Features
 - Desktop Top Bar
