@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delilah OS</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/ad7d45dd90.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="loader-page">
+        <div class="loader-container">
+      <video id="loading-video" autoplay loop muted playsinline>
+         <source src="assets/loading.mp4" type="video/mp4">
+      </video>
+       <h1 class="loading-title">Loading DelilahOS...</h1>
+       <div class="loader"></div>
+       </div>
+    </div>
+    <div class="background hidden-content" id="main-page">
+        <div class="wrapper">
+
+        <div class="container" id="top-bar">
+          <p onclick="openWindow()" id="header">DelilahOS</p>
+          <p class="second">Live Laugh Love</p>
+          <p id="time"></p>
+        </div>
+
+        <div class="calendar" id="calendar">
+            <div class="header-container">
+                <button onclick="previousMonth()"><i class="fa-solid fa-arrow-left"></i></button>
+                <h2 class="monthYear" id="monthYear">August 2026</h2>
+                <button onclick="nextMonth()"><i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+            <div class="day-names">
+                <div>Sun</div>
+                <div>Mon</div>
+                <div>Tue</div>
+                <div>Wed</div>
+                <div>Thu</div>
+                <div>Fri</div>
+                <div>Sat</div>
+            </div>
+            <div class="days" id="calendarDays">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+                <div>5</div>
+                <div>6</div>
+                <div>7</div>
+            </div>
+        </div>
+
+        <div id="about" class="aboutwindow">
+            <div class="handle" id="aboutheader">
+                <div class="window-btn">
+                  <p onclick="closeWindow()" class="icon1"><i class="fa-solid fa-x"></i></p>
+                  <p class="third-btn"></p>
+                  <p onclick="expandWindow()" id="expand" class="icon2"><i class="fa-solid fa-expand"></i></p>
+               </div>
+              <h2 >A Bit About Me</h2>
+            </div>
+            <img src="assets/avatar.jpg" alt="avatar" class="avatar" width="100px">
+            <p>Web Developer</p>
+            <p>I'm a pretty versatile person. <br>
+                 I just love to do it all. <br>
+                 Almost everyday I find something new, <br> that I just have to do, <br>
+                 so one day I woke up and<br>said I want to make websites. <br>
+                 Now you're exploring my little digital world. <br> Welcome to DelilahOS</p>
+
+          <div class="contact-icons">
+            <a href="https://github.com/diditek8-byte" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/delilah-tek-dixon-94a07538a/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/delilah_space8/?hl=en" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+        </div>
+
+        </div>
+        <div id="desktopApps">
+            <div class="selected">
+                <img class="display-img" onclick="openNotesWindow()" src="assets/notes.png" alt="notes" width="80px" id="notes-app">
+                <p class="app-name">Starry Notes</p>
+            </div>
+            <div class="selected">
+                <img class="display-img" onclick="openQuotesWindow()" src="assets/quotes.png" alt="Quotes Icon" width="80px" id="quotes-app">
+                <p class="quotes-p app-name">Random Quotes</p>
+            </div>
+            <div class="selected">
+                <img class="display-img" onclick="openCalculatorWindow()" src="assets/calc.png" alt="calculator-icon" width="80px" id="calculator-app">
+                <p class="calc-p app-name">Calculator</p>
+            </div>
+            <div class="selected">
+                <img class="display-img" onclick="openWeatherWindow()" src="assets/weather.png" alt="weather icon" width="80px" id="weather-app">
+                <p class="weather-p, app-name">Weather App</p>
+            </div>
+        </div>
+
+        <div id="display"></div>
+        <div class="notes" id="app">
+            
+                <!----<div class="windowbtnn" id="appheader">
+                  <p><i class="fa-solid fa-x"></i></p>
+                  <p class="second-btnn"></p>
+                  <p><i class="fa-solid fa-expand"></i></p>
+               </div>
+            <div class="sidebar">
+                <button>+</button>
+                <div class="notes-item notes__list-item--selected">
+                    <p class="title">Notes Title</p>
+                    <p class="body">A part of notes body</p>
+                    <p class="notes-date">Saturday 10:17pm</p>
+                </div>
+                <div class="side-border"></div>
+            </div>
+            <div class="notes-text">
+                <input class="notes-title" type="text" placeholder="Enter your title...">
+                <textarea id="notes-body" placeholder="write your thoughts"></textarea> 
+            </div>---->
+        </div>
+
+        <div class="quotes" id="quotes">
+            <div class="quotes-window-btn" id="quotesheader">
+                 <p onclick="closeQuotesWindow()" class="icon5"><i class="fa-solid fa-x"></i></p>
+                  <p class="grey-btn"></p>
+                  <p onclick="expandQuotesWindow()" class="icon6" id="expandQuote"><i class="fa-solid fa-expand"></i></p>
+            </div>
+            <h1 class="quotes-title">Quote of the Day</h1>
+            <div class="content">
+                <div class="quote-area"></div>
+                  <i class="fa-solid fa-quote-left"></i>
+                  <p class="quote"></p>
+                  <i class="fa-solid fa-quote-right"></i>
+                <div class="author">
+                <span>__</span>
+                <span class="name"></span>
+                </div>
+            </div>
+            <button class="quotes-btn">New Quote</button>
+        </div>
+
+        <div class="calculator" id="calculator">
+            <div class="calc-window-btn" id="calculatorheader">
+                  <p class="icon7" onclick="closeCalculatorWindow()"><i class="fa-solid fa-x"></i></p>
+                  <p class="grey-btn"></p>
+                  <p class="icon8" id="expandCalculator"><i class="fa-solid fa-expand"></i></p>
+            </div>
+            <input class="display" id="display" type="display" readonly>
+            <div id="keys">
+                <button class="operator" onclick="showInDisplay('+')">+</button>
+                <button onclick="showInDisplay('7')">7</button>
+                <button onclick="showInDisplay('8')">8</button>
+                <button onclick="showInDisplay('9')">9</button>
+                <button class="operator" onclick="showInDisplay('-')">-</button>
+                <button onclick="showInDisplay('4')">4</button>
+                <button onclick="showInDisplay('5')">5</button>
+                <button onclick="showInDisplay('6')">6</button>
+                <button class="operator" onclick="showInDisplay('*')">*</button>
+                <button onclick="showInDisplay('1')">1</button>
+                <button onclick="showInDisplay('2')">2</button>
+                <button onclick="showInDisplay('3')">3</button>
+                <button class="operator" onclick="showInDisplay('/')">/</button>
+                <button onclick="showInDisplay('0')">0</button>
+                <button onclick="showInDisplay('.')">.</button>
+                <button class="operator" onclick="calculate()">=</button>
+                <button onclick="clearDisplay()">AC</button>
+            </div>
+        </div>
+
+        <div class="weather" id="weather">
+            <div class="weather-window-btn" id="weatherheader"> 
+                <p class="icon9" onclick="closeWeatherWindow()"><i class="fa-solid fa-x"></i></p>
+                <p class="grey-btn"></p>
+                <p class="icon10" id="expandWeather"><i class="fa-solid fa-expand"></i></p>
+            </div>
+            <div class="search">
+                <input type="text" placeholder="Enter your city" spellcheck="false">
+                <button><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+            <div class="weather-body">
+                <a href="https://freeicons.io/" target="_blank"><img src="assets/rain.png" class="weather-img" width="150px"></a>
+                <h1 class="temp"></h1>
+                <h2 class="city"></h2>
+                <div class="details">
+                    <div class="column">
+                        <a href="https://freeicons.io/" target="_blank"><img src="assets/humidity.png" width="70px"></a>
+                        <div class="detail-container">
+                            <p class="humidity"></p>
+                            <p>Humidity</p>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <a href="https://freeicons.io/" target="_blank"><img src="assets/wind.png" width="100px" class="wind-img"></a>
+                        <div class="detail-container">
+                            <p class="wind"></p>
+                            <p>Wind Speed</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="setting">
+            <div class="setting-window-btn" id="settingheader"> 
+                <p onclick="closeSettingsWindow()" class="icon11"><i class="fa-solid fa-x"></i></p>
+                <p class="grey-btn"></p>
+                <p class="icon12" id="expandSetting"><i class="fa-solid fa-expand"></i></p>
+            </div>
+            <div class="setting-body">
+                <div class="left-border">
+                    <div id="wallpaper">Wallpaper</div>
+                     <div id="display-controls">Display</div>
+                </div>
+                <div class="sideborder2">
+                  <div class="right-side" id="wallpaper-side">
+                    <div class="live">Live</div>
+                     <div class="upper-side">
+                      <div class="select-background">
+                       <img src="assets/static-star.jpeg" width="100px" id="first-img">
+                      </div>
+                       <div class="select-background">
+                        <img src="assets/static-cherry.jpeg" width="100px" id="second-img">
+                      </div>
+                      <div class="select-background">
+                        <img src="assets/static-fuji.jpeg" width="100px" id="third-img">
+                      </div>
+                     </div>
+                     <div class="lower-side">
+                        <div class="static">Static</div>
+                        <div class="select-background">
+                          <img src="assets/space-background.png" width="100px" height="65px" id="fifth-img">
+                        </div>
+                        <div class="select-background">
+                          <img src="assets/lightbackground.jpg" width="100px" id="fourth-img">
+                        </div>
+                         <div class="select-background">
+                          <img src="assets/cloud-background.jpg" width="100px" id="sixth-img">
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="display-side" id="display-side">
+                    <div class="display-color">
+                        <div class="display-container" id="display-container">
+                        <button id="red"></button>
+                        <button id="orange"></button>
+                        <button id="yellow"></button>
+                        <button id="green"></button>
+                        <button id="blue"></button>
+                        <button id="purple"></button>
+                        <button id="pink"></button>
+                        <button id="black"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="bottom-bar" id="bottom-bar">
+            <div class="icons">
+             <div class="notes-icon">
+                 <div class="selected">
+                   <img class="display-img" onclick="openNotesWindow(); iconTap(this);" src="assets/notes.png" alt="notes" width="70px" id="icon-pic">
+                 </div>
+             </div>
+                 <div class="quotes-icon">
+                    <div class="selected">
+                        <img class="display-img" onclick="openQuotesWindow(); quoteIconTap(this);" src="assets/quotes.png" alt="quotes" width="73px" height="70px"  id="icon-img">
+                    </div>
+                 </div>
+                 <div class="calculator-icon">
+                    <div class="selected">
+                        <img class="display-img" onclick="openCalculatorWindow(); calcIconTap(this);" src="assets/calc.png" alt="calculator icon" width="70px" id="calc-icon">
+                    </div>
+                 </div>
+                 <div class="weather-icon">
+                    <div class="selected">
+                        <img class="display-img" onclick="openWeatherWindow(); weatherIconTap(this);"  src="assets/weather.png" alt="weather icon" id="weather-icon" width="70px" height="70px">
+                    </div>
+                 </div>
+                 <div class="setting-icon">
+                    <div class="selected">
+                        <img class="display-img" onclick="openSettingsWindow(); settingsIconTap(this);" src="assets/settings.png" alt="setting icon" width="70px" id="setting-icon">
+                    </div>
+                 </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/script.js" type="module"></script>
+    <script src="./js/quote.js"></script>
+    <script src="./js/calculator.js"></script>
+    <script src="./js/weather.js"></script>
+    <script src="./js/settings.js"></script>
+ 
+</body>
+</html>
