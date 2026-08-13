@@ -266,14 +266,14 @@ p {
 }
 
 .bottom-bar {
-    width: 80%;
+    width: 50%;
     height:80px;
     background-color: #080826;
     border-radius: 35px;
     opacity: 0.85;
     position: fixed;  
     top: 89.5%;
-    left: 10%;
+    left: 25%;
 }
 
 .notes {
@@ -1117,4 +1117,14 @@ div #wallpaper:hover{
 
 #black {
     background-color: black;
+}
+
+@media (max-width: 600px) {
+    .second {
+        margin-left: 70px;
+    } 
+
+    .calendar {
+        margin-left: -30%;
+    }
 }
