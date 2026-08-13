@@ -1,11 +1,10 @@
-const display = document.getElementById("display");
+const display = document.getElementById("display-screen");
 
 function showInDisplay(input) {
     display.value += input;
 }
 
 function clearDisplay() {
-    const display = document.getElementById("display");
     display.value = "";
 }
 
