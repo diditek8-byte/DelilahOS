@@ -18,9 +18,7 @@ Features
 - Random Quotes Generator App
 - Loading Page
 - Calendar Widget
-
-Need to include
-- More Apps
+- Settings App
 
 Built with
 - HTML5
